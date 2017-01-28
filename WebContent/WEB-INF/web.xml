@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>report</display-name>
+  <welcome-file-list>
+    
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+
+
+<context-param>
+<description>Setup the proper area where the uploaded files will be situated..</description>
+<param-name>file-upload</param-name>
+ <param-value> /home/ec2-user/files/ </param-value>
+ </context-param> 
+
+  <servlet>
+    <description></description>
+    <display-name>UploadServlettest</display-name>
+    <servlet-name>UploadServlettest</servlet-name>
+    <servlet-class>publish.UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadServlettest</servlet-name>
+    <url-pattern>/UploadServlet</url-pattern>
+    
+  </servlet-mapping>
+</web-app>
